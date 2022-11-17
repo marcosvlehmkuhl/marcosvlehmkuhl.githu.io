@@ -1,0 +1,9 @@
+<ul>
+  {%- for item in collections.changelog -%}
+    <li>
+      <a href={{item.data.page.url}}>
+        {{item.data.date | formatDate}} {{ item.data.title }}
+      </a>
+    </li>
+  {%- endfor -%}
+</ul>
