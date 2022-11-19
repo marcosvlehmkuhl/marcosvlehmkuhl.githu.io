@@ -1,0 +1,9 @@
+---
+layout: base.njk
+---
+{% if status == "draft" %}
+  <div class="draft-banner">
+    This is a draft
+  </div>
+{% endif %}
+{{ content | safe }}

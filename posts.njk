@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 <ul>
-  {%- for item in collections.changelog -%}
+  {%- for item in collections.posts -%}
     <li>
       {% if item.data.status == "draft" %}
         <div class="draft-banner">

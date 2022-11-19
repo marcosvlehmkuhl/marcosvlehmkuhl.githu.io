@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "npx @11ty/eleventy --serve",
+    "serve": "rm -rf _site && npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
+    "build:prod": "ENV=production npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
