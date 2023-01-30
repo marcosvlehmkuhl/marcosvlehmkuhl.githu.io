@@ -1,9 +1,12 @@
 ---
 layout: base.njk
 ---
-{% if status == "draft" %}
-  <div class="draft-banner">
-    This is a draft
-  </div>
-{% endif %}
-{{ content | safe }}
+<main class="content container">
+  {% if status == "draft" %}
+    <div class="draft-banner">
+      This is a draft
+    </div>
+  {% endif %}
+  <time datetime={{date}} class="publish-date">{{date | formatDate}}</time>
+  {{ content | safe }}
+</main>

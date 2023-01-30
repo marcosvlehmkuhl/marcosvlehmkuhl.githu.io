@@ -1,3 +1,11 @@
+---
+menu:
+  - name: home
+    url: "/"
+  - name: changelog
+    url: "/changelog"
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,13 +18,15 @@
       <link rel="stylesheet" type="text/css" href={{'/css/'+css | url }} />
     {% endif %}
 
+    <script defer data-domain="marcos.lehmkuhl.dev" src="https://plausible.io/js/script.js"></script>
   </head>
   <body>
     <header class="header container">
       <nav>
         <ul>
-          <li><a href="/">home</a></li>
-          <li><a href="/changelog">changelog</a></li>
+          {% for item in menu %}
+            <li><a href={{item.url}}>{{item.name}}</a></li>
+          {% endfor %}
         </ul>
       </nav>  
     </header>
