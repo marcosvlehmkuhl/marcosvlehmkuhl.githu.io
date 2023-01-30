@@ -1,9 +1,12 @@
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addWatchTarget("css");
 
-  eleventyConfig.addFilter("formatDate", function(date) {
-    return new Intl.DateTimeFormat('en-US', {timeZone: "UTC"}).format(date)
-  });  
-  return {}
+  eleventyConfig.addPassthroughCopy("public");
+  eleventyConfig.addWatchTarget("public");
+
+  eleventyConfig.addFilter("formatDate", function (date) {
+    return new Intl.DateTimeFormat("en-US", { timeZone: "UTC" }).format(date);
+  });
+  return {};
 };

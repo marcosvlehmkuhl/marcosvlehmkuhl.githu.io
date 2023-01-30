@@ -1,3 +1,144 @@
+:root {
+  --main-color: #3226f3;
+}
+
+@font-face {
+  font-family: "Space Grotesk Bold";
+  src: url(/public/fonts/SpaceGrotesk-Bold.woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url(/public/fonts/SpaceGrotesk.woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url(/public/fonts/PublicSans-Medium.woff2);
+  font-display: swap;
+}
+
+body {
+  font-family: "Public Sans";
+  font-size: 16px;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.header ul {
+  padding: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.header li {
+  list-style: none;
+  margin-right: 1em;
+}
+
 .draft-banner {
   background-color: red;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.cover-container {
+  max-width: 768px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 100px;
+}
+
+.title {
+  font-family: "Space Grotesk Bold";
+  font-size: 48px;
+  line-height: 1em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 100;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: var(--main-color);
+  left: 1px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+.cover-title {
+  font-family: "Space Grotesk Bold";
+  font-size: 48px;
+  line-height: 1em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 100;
+  position: relative;
+  display: inline-block;
+}
+
+.cover-title span {
+  position: relative;
+}
+
+.cover-title span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: var(--main-color);
+  left: 1px;
+  bottom: 6px;
+  z-index: -1;
+}
+
+.cover-img {
+  position: absolute;
+  left: 0;
+  transform: translateX(-120%);
+  height: 100%;
+}
+
+@keyframes marquee {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+.in-construction-marquee {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: black;
+  font-size: 32px;
+  padding: 0 0.25em;
+  text-transform: uppercase;
+  line-height: 1;
+  position: relative;
+  height: 1em;
+}
+
+.in-construction-marquee span {
+  color: yellow;
+  font-weight: bold;
+  animation: marquee 5s linear infinite;
+  position: absolute;
+  width: 75%;
+  float: left;
 }
