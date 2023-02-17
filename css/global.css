@@ -193,3 +193,54 @@ a:hover {
 .content p {
   margin-top: 0;
 }
+
+.todo-tooltip-target {
+  position: relative;
+  background-color: #fee9ae;
+}
+
+.todo-tooltip-target:hover {
+  background-color: #fcc934;
+}
+
+.todo-tooltip {
+  opacity: 0;
+  transition: 1;
+  position: absolute;
+  width: 200px;
+  background-color: #ffffff;
+  top: 10px;
+  left: 50%;
+  padding: 0.75rem;
+  transform: translate(-50%, calc(-100% - 10px));
+  box-shadow: 1px 1px 13px -5px #7a7474;
+  border-radius: 3px;
+}
+
+.todo-tooltip::before {
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #999999;
+  top: calc(100% + 1px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.todo-tooltip::after {
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.todo-tooltip-target:hover .todo-tooltip {
+  opacity: 1;
+  transition: all 0.25s;
+  top: 0;
+}

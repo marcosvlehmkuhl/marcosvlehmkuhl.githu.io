@@ -13,10 +13,10 @@
 
 SQL databases are powerful and simple, most of the time all you need to know is the basics, `SELECT`, `JOIN`, `WHERE` but sometimes you will face problems where the basic stuff won't help. Recently I got one of those problems and Recursive CTE came to help.
 
-## @TODO CTE
+## @todoCTE[Think on a better title]@endtodo
 
 Ok, first what is CTE.
-CTE stands for _Common Table Expression_ which is SQL `WITH` clause...
+CTE stands for _Common Table Expression_ and it is a temporary table that exists only for on query, as soon the query returns a result that table cease to exist. @todoIt is a great way to break up complex queries[rephrase this setence]@endtodo.
 
 ## CTE Recursive
 
@@ -74,8 +74,6 @@ Suppose we have the following data representing a Secret Santa Game
 
 So what if we wanted to get a table that showed every participant in the same order in which they've played the game.
 We want the order to be John Doe, Jane Doe, Bob Doe and Foo Dane. We can do that with Recursive CTE
-
-@TODO check if the query makes sense
 
 ```sql
 WITH RECURSIVE next_participant AS (
