@@ -39,7 +39,7 @@ Let's see an example. What if you wanted to know the ancestry tree of someone. L
 
 Suppose we have the following data representing a Secret Santa Game
 
-<table>
+<table class="sql-table">
   <thead>
     <tr>
       <th>id</th>
@@ -75,7 +75,7 @@ Suppose we have the following data representing a Secret Santa Game
 So what if we wanted to get a table that showed every participant in the same order in which they've played the game.
 We want the order to be John Doe, Jane Doe, Bob Doe and Foo Dane. We can do that with Recursive CTE
 
-```sql
+```sql/1,3/5-8
 WITH RECURSIVE next_participant AS (
     SELECT *
     FROM participant
@@ -90,7 +90,7 @@ SELECT * FROM next_participant;
 
 The result would be
 
-<table>
+<table class="sql-table">
   <thead>
     <tr>
       <th>id</th>

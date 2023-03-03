@@ -1,0 +1,46 @@
+.sql-table {
+  --border-color: #cfc6c6;
+  --header-color: #efefef;
+
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  border-spacing: 0;
+  text-align: left;
+  box-shadow: 0px 2px 8px -5px #b2b3b5;
+  margin-bottom: 1em;
+}
+
+.sql-table thead {
+  background-color: var(--header-color);
+}
+
+.sql-table thead th {
+  padding: 0.5em 1em;
+  font-weight: normal;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sql-table thead th:first-child {
+  border-top-left-radius: 5px;
+}
+.sql-table thead th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.sql-table thead th:not(:last-child) {
+  border-right: 1px solid var(--border-color);
+}
+
+.sql-table tbody td {
+  padding: 0.5em 1em;
+  font-weight: normal;
+}
+
+.sql-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sql-table tbody td:not(:last-child) {
+  border-right: 1px solid var(--border-color);
+}
